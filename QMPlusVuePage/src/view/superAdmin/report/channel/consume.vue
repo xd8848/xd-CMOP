@@ -11,7 +11,7 @@
         </el-form-item>
         
         <el-form-item label="">
-          <el-input placeholder="主播昵称/登录账号" v-model="searchInfo.name"></el-input>
+          <el-input placeholder="推广源" v-model="searchInfo.name"></el-input>
         </el-form-item>
 
         <el-form-item>
@@ -25,18 +25,10 @@
     </div>
     <el-table :data="tableData" border stripe>
       <el-table-column label="id" min-width="60" prop="ID"></el-table-column>
-      <el-table-column label="主播" min-width="150" prop="anchorName"></el-table-column>
-      <el-table-column label="直播时长" min-width="150" prop="duration"></el-table-column>
-      <el-table-column label="打赏数" min-width="150" prop="rewardNum"></el-table-column>
-      <el-table-column label="白嫖比例" min-width="150" prop="rate"></el-table-column>
+      <el-table-column label="推广源" min-width="150" prop="anchorName"></el-table-column>
+      <el-table-column label="消费次数" min-width="150" prop="duration"></el-table-column>
+      <el-table-column label="提成(¥)" min-width="150" prop="rewardNum"></el-table-column>
       
-      <el-table-column fixed="right" label="操作" min-width="300">
-        <template slot-scope="scope">
-          <el-button @click="getLiveStreamInfoList(scope.row.id)" size="small" type="text">直播明细</el-button>
-          <el-button @click="getRewardReceiptList(scope.row.id)" size="small" type="text">打赏流水</el-button>
-          <el-button @click="getTopRewardList(scope.row.id)" size="small" type="text">打赏排行</el-button>
-        </template>
-      </el-table-column>
 
     </el-table>
     <el-pagination

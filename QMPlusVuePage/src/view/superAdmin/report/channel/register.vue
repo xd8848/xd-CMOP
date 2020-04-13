@@ -11,7 +11,7 @@
         </el-form-item>
         
         <el-form-item label="">
-          <el-input placeholder="主播昵称/登录账号" v-model="searchInfo.name"></el-input>
+          <el-input placeholder="推广源" v-model="searchInfo.name"></el-input>
         </el-form-item>
 
         <el-form-item>
@@ -25,7 +25,6 @@
     </div>
     <el-table :data="tableData" border stripe>
       <el-table-column label="id" min-width="60" prop="ID"></el-table-column>
-          <el-table-column label="id" min-width="60" prop="ID"></el-table-column>
       <el-table-column label="推广源" min-width="150" prop="anchorName"></el-table-column>
       <el-table-column label="注册次数" min-width="150" prop="duration"></el-table-column>
       <el-table-column label="提成(¥)" min-width="150" prop="rewardNum"></el-table-column>
