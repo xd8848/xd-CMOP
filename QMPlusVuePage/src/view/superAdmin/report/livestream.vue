@@ -20,8 +20,7 @@
         <el-form-item>
           <el-button @click="onSubmit" type="primary">查询</el-button>
         </el-form-item>
-   
-                <el-form-item>
+            <el-form-item>
           <el-button @click="openDialog('addApi')" type="primary">下载报表</el-button>
         </el-form-item>
       </el-form>
@@ -89,7 +88,7 @@
 // 获取列表内容封装在mixins内部  getTableData方法 初始化已封装完成 条件搜索时候 请把条件安好后台定制的结构体字段 放到 this.searchInfo 中即可实现条件搜索
 
 import {
- 
+  downloadLiveStreamList,
   getLiveStreamList
   // createApi,
   // updataApi,
