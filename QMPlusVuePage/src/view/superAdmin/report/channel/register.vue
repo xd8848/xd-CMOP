@@ -18,16 +18,13 @@
           <el-button @click="onSubmit" type="primary">查询</el-button>
         </el-form-item>
    
-                <el-form-item>
-          <el-button @click="openDialog('addApi')" type="primary">下载报表</el-button>
-        </el-form-item>
       </el-form>
     </div>
     <el-table :data="tableData" border stripe>
       <el-table-column label="id" min-width="60" prop="ID"></el-table-column>
-      <el-table-column label="推广源" min-width="150" prop="anchorName"></el-table-column>
-      <el-table-column label="注册次数" min-width="150" prop="duration"></el-table-column>
-      <el-table-column label="提成(¥)" min-width="150" prop="rewardNum"></el-table-column>
+      <el-table-column label="推广源" min-width="150" prop="sourceName"></el-table-column>
+      <el-table-column label="注册次数" min-width="150" prop="times"></el-table-column>
+      <el-table-column label="提成(¥)" min-width="150" prop="fee"></el-table-column>
       
 
     </el-table>
@@ -79,11 +76,11 @@
 
 import {
  
-  getLiveStreamList
+  getChannelReportList
   // createApi,
   // updataApi,
   // deleteApi
-} from '@/api/livestream'
+} from '@/api/channel'
 import infoList from '@/components/mixins/infoList'
 
 const methodOptions = [
@@ -114,7 +111,7 @@ export default {
   mixins: [infoList],
   data() {
     return {
-      listApi: getLiveStreamList,
+      listApi: getChannelReportList,
       listKey: 'list',
       dialogFormVisible: false,
       form: {

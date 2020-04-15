@@ -6,6 +6,7 @@ import (
 	"gin-vue-admin/middleware"
 	"gin-vue-admin/router"
 	"gin-vue-admin/router/bop"
+
 	"github.com/gin-gonic/gin"
 	"github.com/swaggo/gin-swagger"
 	"github.com/swaggo/gin-swagger/swaggerFiles"
@@ -36,6 +37,7 @@ func InitRouter() *gin.Engine {
 	bop.InitEarningRouter(ApiGroup)    // 收益统计路由
 	bop.InitAnchorRouter(ApiGroup)     // 直播管理路由
 
+	bop.InitChannelRouter(ApiGroup)
 	router.InitFileUploadAndDownloadRouter(ApiGroup) // 文件上传下载功能路由
 	router.InitWorkflowRouter(ApiGroup)              // 工作流相关路由
 	router.InitCasbinRouter(ApiGroup)                // 权限相关路由
